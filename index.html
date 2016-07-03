@@ -6,15 +6,28 @@
   </head>
   <body>
     <h1 style="color:red">Hello</h1>
-    <p>Click the button to display an alert box:</p>
+    <p>Click the button to Add these numbers together:</p>
+      <input type="number" id="add">
+      +<input type="number" id="add">
+      =
+    <form>
+      <br>
+      <input id="button" type="button" value="click" onclick="add() adde()"/>
+      window.sumInputs = function() {
+    var inputs = document.getElementsById('add'),
+        result = document.getElementById('total'),
+        sum = 0;
 
-<button onclick="myFunction()">Derp</button>
+    for(var i=0; i<inputs.length; i++) {
+        var ip = inputs[i];
 
-<script>
-function myFunction() {
-    console.log("Hello");
-}
-</script>
-    <p>This is my web page</p>
+        if (ip.name && ip.name.indexOf("total") < 0) {
+            sum += parseInt(ip.value) || 0;
+        }
+
+    }
+
+    result.value = sum;
+}​
   </body>
 </html>
