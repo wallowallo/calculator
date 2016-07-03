@@ -8,26 +8,18 @@
     <h1 style="color:red">Hello</h1>
     <p>Click the button to Add these numbers together:</p>
       <input type="number" id="add">
-      +<input type="number" id="add">
-      =
-    <form>
-      <br>
-      <input id="button" type="button" value="click" onclick="add() adde()"/>
+      +<input type="number" id="adde">
+      =<p id="sum">
+      </p>
+  <input id="button" type="button" value="click" onclick="sumInputs()"/>
+<script>
       window.sumInputs = function() {
-    var inputs = document.getElementsById('add'),
-        result = document.getElementById('total'),
-        sum = 0;
-
-    for(var i=0; i<inputs.length; i++) {
-        var ip = inputs[i];
-
-        if (ip.name && ip.name.indexOf("total") < 0) {
-            sum += parseInt(ip.value) || 0;
-        }
-
-    }
-
-    result.value = sum;
-}​
+console.log("calculateSum");
+var firstInput= document.getElementById('add');
+var secondInput= document.getElementById('adde')
+var sum= document.getElementById('sum')
+sum.innerHTML= parseInt(firstInput.value) + parseInt(secondInput.value)
+  }
+</script>
   </body>
 </html>
